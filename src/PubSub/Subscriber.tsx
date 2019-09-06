@@ -28,7 +28,6 @@ class Subscriber extends Component<Props, State> {
     render() {
         const { state: { data }, props: { children } } = this;
         return Children.map(children, (child) => cloneElement(child, { ...this.props, data }))
-        // children(data)
     }
 
 }
