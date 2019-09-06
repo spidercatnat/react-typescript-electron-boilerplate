@@ -1,11 +1,11 @@
 import React, { Component, ReactNode, Fragment } from 'react';
-import { Subscriber, publish } from './PubSub';
+import { Subscriber, messageService } from './PubSub';
 import { AlertTopic } from './constants';
 import logo from './logo.svg';
 import './App.css';
 
 const App: React.FC = () => {
-  setTimeout(() => publish(AlertTopic, 'Hello RxJS <3'), 2000)
+  setTimeout(() => messageService.sendMessage(AlertTopic, 'Hello RxJS <3'), 2000)
   return (
     <div className="App">
       <header className="App-header">

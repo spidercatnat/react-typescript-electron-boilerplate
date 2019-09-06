@@ -1,1 +1,2 @@
-export { Subscriber, publish } from './PubSub';
+export { Subscriber } from './Subscriber';
+export { messageService } from './messageService';
