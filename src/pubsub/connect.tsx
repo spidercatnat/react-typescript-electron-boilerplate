@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Subscriber } from './Subscriber';
 
 export const connect = (Comp: React.ElementType, topic: String) => {
