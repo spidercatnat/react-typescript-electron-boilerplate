@@ -1,1 +1,1 @@
-export { AlertTopic, WarningTopic, InfoTopic } from './topics';
+export { topics } from './topics';

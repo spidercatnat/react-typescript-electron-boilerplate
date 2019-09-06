@@ -1,0 +1,1 @@
+export { Comp } from './Comp';

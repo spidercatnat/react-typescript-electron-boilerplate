@@ -1,3 +1,9 @@
-export const AlertTopic: String = 'alert topic';
-export const WarningTopic: String = 'warning topic';
-export const InfoTopic: String = 'info topic';
+const AlertTopic: String = 'alert topic';
+const WarningTopic: String = 'warning topic';
+const InfoTopic: String = 'info topic';
+
+export const topics = {
+    AlertTopic,
+    WarningTopic,
+    InfoTopic
+}
