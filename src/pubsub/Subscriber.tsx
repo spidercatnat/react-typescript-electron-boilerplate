@@ -9,7 +9,6 @@ import { Component, cloneElement, Children } from 'react'
 import { filter, shareReplay, scan } from 'rxjs/operators'
 import { Props, State } from './types';
 import { messageService } from '.';
-import { StringDecoder } from 'string_decoder';
 export * from '../constants/topics'
 
 class Subscriber extends Component<Props, State> {
