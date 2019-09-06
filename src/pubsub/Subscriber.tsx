@@ -25,7 +25,7 @@ class Subscriber extends Component<Props, State> {
                 /**
                  * If you want an array of the entire history, uncomment:
                  *  scan((acc: any, curr: any) => [...acc, curr], [])
-                 *  and access items in subscrube() with msg.pop()
+                 *  and access items in subscribe() with msg.pop()
                  */
             )
             .subscribe((msg: any) => {
