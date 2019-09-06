@@ -13,12 +13,9 @@ import { StringDecoder } from 'string_decoder';
 export * from '../constants/topics'
 
 class Subscriber extends Component<Props, State> {
-
     state = { data: null }
     subscription: any
     unsubscribe: any
-
-
     componentDidMount() {
         this.subscription = messageService
             .getMessage()
