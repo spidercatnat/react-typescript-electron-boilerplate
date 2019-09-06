@@ -1,26 +1,18 @@
-import React from 'react';
-import { Subscriber, publish } from './components';
+import React, { Component, ReactNode, Fragment } from 'react';
+import { Subscriber, publish } from './PubSub';
 import { AlertTopic } from './constants';
 import logo from './logo.svg';
 import './App.css';
-const Test = (props: any) => <div>{props.data}</div>
+
 const App: React.FC = () => {
-  setTimeout(() => publish(AlertTopic, 'Hello, world!'), 2000)
+  setTimeout(() => publish(AlertTopic, 'Hello RxJS <3'), 2000)
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Subscriber topic={AlertTopic}>
-          {(text: any) => <Test data={text} />}
+          {(data: any) => <div>{data}</div>}
         </Subscriber>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

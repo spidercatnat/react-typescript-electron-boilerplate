@@ -1,5 +1,11 @@
+/**
+ * TODO: 
+ * - Pass reference to subscription from lookup table to unsubscribe.
+ * - Allow subscription to multiple Observables
+ */
+
 import React, { Component, ReactNode } from 'react'
-import { Subject } from 'rxjs'
+import { BehaviorSubject } from 'rxjs'
 import { filter } from 'rxjs/operators'
 export * from '../constants/topics'
 
@@ -13,26 +19,27 @@ interface Props {
     topic?: any
 }
 
-const mainSubject: Subject<any> = new Subject()
+const mainSubject: BehaviorSubject<any> = new BehaviorSubject(0)
 
 export const publish = (topic: any, data: any) => {
     mainSubject.next({ topic, data });
 }
 
 class Subscriber extends Component<Props, State> {
-    unsub: any
+    subscription: any
     constructor(props: Props) {
         super(props)
         this.state = { data: null }
-        this.unsub = mainSubject
+        this.subscription = mainSubject
             .pipe(filter(f => f.topic === this.props.topic))
             .subscribe((s: any) => {
                 this.setState({ data: s.data })
             })
     }
     componentWillUnmount() {
-        this.unsub.unsubscribe()
+        this.unsubscribe();
     }
+    unsubscribe = () => this.subscription.unsubscribe();
     render() {
         const { state: { data }, props: { children } } = this;
         return children(data)
