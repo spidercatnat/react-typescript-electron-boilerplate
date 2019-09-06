@@ -28,18 +28,14 @@ class Subscriber extends Component<Props, State> {
                 const msg = data.pop()
                 if (msg.topic === this.props.topic) this.setState({ data: msg.data })
             })
-
         this.unsubscribe = () => this.subscription.unsubscribe();
     }
-
     componentWillUnmount() {
         this.unsubscribe();
     }
-
     render() {
         const { state: { data }, props: { children } } = this;
         return Children.map(children, (child) => cloneElement(child, { ...this.props, data }))
     }
-
 }
 export { Subscriber }
