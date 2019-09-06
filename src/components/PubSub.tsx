@@ -35,11 +35,7 @@ class Subscriber extends Component<Props, State> {
     }
     render() {
         const { state: { data }, props: { children } } = this;
-        return (
-            <React.Fragment>
-                {children(data)}
-            </React.Fragment>
-        )
+        return children(data)
     }
 }
 
