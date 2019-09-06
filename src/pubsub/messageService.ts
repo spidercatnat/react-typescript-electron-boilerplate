@@ -6,6 +6,6 @@ export const messageService = {
     sendMessage: (topic: any, data: any) => {
         subject.next({ topic, data });
     },
-    getMessage: () => subject.asObservable(),
+    getMessage: () => subject.asObservable()
 }
 

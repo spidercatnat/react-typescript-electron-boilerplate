@@ -6,7 +6,7 @@
  */
 
 import { Component, cloneElement, Children } from 'react'
-import { filter, shareReplay, scan } from 'rxjs/operators'
+import { filter, shareReplay } from 'rxjs/operators'
 import { Props, State } from './types';
 import { messageService } from '.';
 export * from '../constants/topics'

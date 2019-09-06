@@ -1,4 +1,4 @@
-import React, { Component, cloneElement, Children, ReactNode } from 'react'
+import React, { Component, cloneElement, Children, } from 'react'
 import { Context } from '.';
 
 class Consumer extends Component<any, any> {

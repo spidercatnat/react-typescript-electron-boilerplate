@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd'
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from '../../context';
 
 const Nav = withRouter(
