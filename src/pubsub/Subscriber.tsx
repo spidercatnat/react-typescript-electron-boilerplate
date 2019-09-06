@@ -22,10 +22,13 @@ class Subscriber extends Component<Props, State> {
             .pipe(
                 shareReplay(),
                 filter((f: any) => f.topic === this.props.topic),
-                scan((acc: any, curr: any) => [...acc, curr], []),
+                /**
+                 * If you want an array of the entire history, uncomment:
+                 *  scan((acc: any, curr: any) => [...acc, curr], [])
+                 *  and access items in subscrube() with msg.pop()
+                 */
             )
-            .subscribe((data: any) => {
-                const msg = data.pop()
+            .subscribe((msg: any) => {
                 if (msg.topic === this.props.topic) this.setState({ data: msg.data })
             })
         this.unsubscribe = () => this.subscription.unsubscribe();
