@@ -27,7 +27,7 @@ class Subscriber extends Component<Props, State> {
         this.unsub = mainSubject
             .pipe(filter(f => f.topic === this.props.topic))
             .subscribe((s: any) => {
-                this.setState({ data: s.data }, () => console.log(this.state))
+                this.setState({ data: s.data })
             })
     }
     componentWillUnmount() {
@@ -37,7 +37,7 @@ class Subscriber extends Component<Props, State> {
         const { state: { data }, props: { children } } = this;
         return (
             <React.Fragment>
-                {React.Children.map(children, (child: any) => React.cloneElement(child, { data: this.state.data }))}
+                {children(data)}
             </React.Fragment>
         )
     }

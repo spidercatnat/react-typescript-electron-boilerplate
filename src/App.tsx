@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Subscriber topic={AlertTopic}>
-          <Test />
+          {(text: any) => <Test data={text} />}
         </Subscriber>
         <a
           className="App-link"
