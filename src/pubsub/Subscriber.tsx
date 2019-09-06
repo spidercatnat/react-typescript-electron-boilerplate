@@ -6,21 +6,34 @@
  */
 
 import { Component, cloneElement, Children } from 'react'
-import { filter } from 'rxjs/operators'
+import { filter, shareReplay, scan } from 'rxjs/operators'
 import { Props, State } from './types';
 import { messageService } from '.';
+import { StringDecoder } from 'string_decoder';
 export * from '../constants/topics'
 
 class Subscriber extends Component<Props, State> {
 
     state = { data: null }
+    subscription: any
+    unsubscribe: any
 
-    subscription = messageService
-        .getMessage()
-        .pipe(filter(f => f.topic === this.props.topic))
-        .subscribe((s: any) => this.setState({ data: s.data }))
 
-    unsubscribe = () => this.subscription.unsubscribe();
+    componentDidMount() {
+        this.subscription = messageService
+            .getMessage()
+            .pipe(
+                shareReplay(),
+                filter((f: any) => f.topic === this.props.topic),
+                scan((acc: any, curr: any) => [...acc, curr], []),
+            )
+            .subscribe((data: any) => {
+                const msg = data.pop()
+                if (msg.topic === this.props.topic) this.setState({ data: msg.data })
+            })
+
+        this.unsubscribe = () => this.subscription.unsubscribe();
+    }
 
     componentWillUnmount() {
         this.unsubscribe();

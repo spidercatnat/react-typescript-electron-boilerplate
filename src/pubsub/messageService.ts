@@ -1,11 +1,11 @@
-import { BehaviorSubject } from 'rxjs'
+import { ReplaySubject } from 'rxjs'
 
-const subject: BehaviorSubject<any> = new BehaviorSubject(0)
+const subject: ReplaySubject<any> = new ReplaySubject()
 
 export const messageService = {
     sendMessage: (topic: any, data: any) => {
         subject.next({ topic, data });
     },
-    getMessage: () => subject.asObservable()
+    getMessage: () => subject.asObservable(),
 }
 
