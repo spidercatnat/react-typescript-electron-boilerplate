@@ -4,7 +4,7 @@
  * - Allow subscription to multiple Observables
  */
 
-import { Component } from 'react'
+import { Component, cloneElement, Children } from 'react'
 import { filter } from 'rxjs/operators'
 import { Props, State } from './types';
 import { messageService } from '../PubSub';
@@ -27,7 +27,8 @@ class Subscriber extends Component<Props, State> {
 
     render() {
         const { state: { data }, props: { children } } = this;
-        return children(data)
+        return Children.map(children, (child) => cloneElement(child, { ...this.props, data }))
+        // children(data)
     }
 
 }
