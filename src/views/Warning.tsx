@@ -7,7 +7,6 @@ const Warning = contextualize(
         const { WarningTopic } = props.topics;
         return (
             <>
-                Showing Warning subscriber:
                 <Comp topic={WarningTopic} />
             </>
         )

@@ -7,7 +7,6 @@ const Info = contextualize(
         const { InfoTopic} = props.topics;
         return (
             <>
-                Showing Info subscriber:
                 <Comp topic={InfoTopic} />
             </>
         )

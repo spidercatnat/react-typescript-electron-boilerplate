@@ -7,12 +7,12 @@ const Nav = withRouter(
     contextualize(
         (props: any) => {
             return (
-                <>
-                    <Button type='primary' block onClick={() => props.history.push('/')}>All</Button>
-                    <Button type='primary' block onClick={() => props.history.push('/alert')}>Alert</Button>
-                    <Button type='primary' block onClick={() => props.history.push('/info')}>Info</Button>
-                    <Button type='primary' block onClick={() => props.history.push('/warning')}>Warning</Button>
-                </>
+                <div style={{display: 'flex', justifyContent: 'space-around', width: '40vw', padding: '2%'}}>
+                    <Button size='large' type='primary' onClick={() => props.history.push('/')}>/</Button>
+                    <Button size='large' type='primary' onClick={() => props.history.push('/alert')}>/alert</Button>
+                    <Button size='large' type='primary' onClick={() => props.history.push('/info')}>/info</Button>
+                    <Button size='large' type='primary' onClick={() => props.history.push('/warning')}>/warning</Button>
+                </div>
             )
         }
     )

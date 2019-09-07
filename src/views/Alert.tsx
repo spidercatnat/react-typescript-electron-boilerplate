@@ -7,7 +7,6 @@ const Alert = contextualize(
         const { AlertTopic } = props.topics;
         return (
             <>
-                Showing Alert subscriber:
                 <Comp topic={AlertTopic} />
             </>
         )
