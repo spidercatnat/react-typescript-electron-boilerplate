@@ -1,4 +1,3 @@
-
 .App {
   text-align: center;
 }
@@ -10,14 +9,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: palevioletred;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #e1da8a;
+}
+
+.Routes {
+  color:floralwhite;
 }
 
 .App-link {
