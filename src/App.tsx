@@ -18,7 +18,8 @@ const App: React.FC = (props: any) => {
             This makes way for a semantic separation of concerns between what I call macros and micros: the Provider store can handle 
             app-level changes (macros), while the components can define their own fine-grained control-flow of reactions (micros) to those changes.
             Aside from producing human-friendly code, the amount of energy spent on programming what can often be haphazard lifecycle hooks 
-            to prevent unnecessary rerendering is significantly reduced.
+            to prevent unnecessary rerendering is significantly reduced. <br />
+            Have fun! ~ Natalie <a href='https://instagram.com/bloom.510' target='_blank'>@bloom.510</a>
           </small>
           <Router>
             <Nav />
