@@ -11,7 +11,7 @@ interface UncomposedProps {
 }
 
 const Comp = ({ topic }: UncomposedProps) => subscribe(
-    ({ data, topic }: ComposedProps = {}) => (
+    ({ data, topic }: ComposedProps) => (
         <div>{data ? data : `${topic} has no actvity yet`}</div>
     ), topic)
 
