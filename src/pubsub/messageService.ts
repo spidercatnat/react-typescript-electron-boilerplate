@@ -3,7 +3,6 @@ import { ReplaySubject } from 'rxjs'
  *  - Ensure singularity by converting into a true singleton class
  */
 
-
 const subject: ReplaySubject<any> = new ReplaySubject()
 
 export const messageService = {

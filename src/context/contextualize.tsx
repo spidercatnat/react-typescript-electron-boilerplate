@@ -1,7 +1,7 @@
 import React, { ElementType } from 'react';
 import { Consumer } from '.';
 
-const connect = (Comp: ElementType) => (
+const contextualize = (Comp: ElementType) => (
   (props: any) => (
     <Consumer>
       <Comp {...props} />
@@ -9,4 +9,4 @@ const connect = (Comp: ElementType) => (
   )
 );
 
-export { connect };
+export { contextualize };

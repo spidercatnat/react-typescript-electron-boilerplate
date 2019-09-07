@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from '../../pubsub';
+import { subscribe } from '../../pubsub';
 
 interface Comp {
     data?: {},
@@ -10,7 +10,7 @@ interface ConnectedComp {
     topic: String
 }
 
-const Comp = ({ topic }: ConnectedComp) => connect(
+const Comp = ({ topic }: ConnectedComp) => subscribe(
     ({ data, topic }: Comp = {}) => (
         <div>{data ? `${data}` : `${topic} has no actvity yet`}</div>
     ), topic)

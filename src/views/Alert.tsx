@@ -1,8 +1,8 @@
 import React from 'react';
-import { connect } from '../context';
+import { contextualize } from '../context';
 import { Comp } from '../components';
 
-const Alert = connect(
+const Alert = contextualize(
     (props: any) => {
         const { AlertTopic } = props.topics;
         return (

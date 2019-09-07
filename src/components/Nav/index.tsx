@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button } from 'antd'
 import { withRouter } from 'react-router-dom';
-import { connect } from '../../context';
+import { contextualize } from '../../context';
 
 const Nav = withRouter(
-    connect(
+    contextualize(
         (props: any) => {
             return (
                 <>
