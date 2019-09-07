@@ -10,9 +10,8 @@ interface UncomposedProps {
     topic: String
 }
 
-const Comp = ({ topic }: UncomposedProps) => subscribe(
-    ({ data, topic }: ComposedProps) => (
-        <div>{data ? data : `${topic} has no actvity yet`}</div>
-    ), topic)
+const Comp = ({ topic }: UncomposedProps) => subscribe(({ data, topic }: ComposedProps) => (
+    <div>{data ? data : `${topic} has no actvity yet`}</div>
+), topic)
 
 export { Comp }
