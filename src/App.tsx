@@ -19,7 +19,7 @@ const App: React.FC = (props: any) => {
             app-level changes (macros), while the components can define their own fine-grained flow of reactions (micros) to those changes.
             Aside from producing human-friendly code, the amount of energy spent on programming what can often be haphazard lifecycle hooks 
             to prevent unnecessary rerendering is significantly reduced. <br />
-            Have fun! ~ Natalie <a href='https://instagram.com/bloom.510' target='_blank'>@bloom.510</a>
+            Have fun! ~ Natalie <a href='https://instagram.com/bloom.510' target='_blank'rel="noopener noreferrer">@bloom.510</a>
           </small>
           <Router>
             <Nav />
