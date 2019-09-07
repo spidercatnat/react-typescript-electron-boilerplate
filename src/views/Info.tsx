@@ -4,7 +4,7 @@ import { Comp } from '../components';
 
 const Info = contextualize(
     (props: any) => {
-        const { InfoTopic} = props.topics;
+        const { InfoTopic } = props.topics;
         return (
             <>
                 <Comp topic={InfoTopic} />
