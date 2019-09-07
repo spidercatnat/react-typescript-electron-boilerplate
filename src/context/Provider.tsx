@@ -10,6 +10,8 @@ class Provider extends Component {
     setTimeout(() => messageService.sendMessage(AlertTopic, `${AlertTopic} got a message!`), 2000)
     setTimeout(() => messageService.sendMessage(WarningTopic, `${WarningTopic} got a message!`), 4000)
     setTimeout(() => messageService.sendMessage(InfoTopic, `${InfoTopic} got a message!`), 6000)
+    setTimeout(() => messageService.sendMessage(InfoTopic, `${InfoTopic} got a 2nd message!`), 8000)
+
   }
   render() {
     return (
