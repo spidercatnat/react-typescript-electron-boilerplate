@@ -1,17 +1,17 @@
 import React from 'react';
 import { subscribe } from '../../pubsub';
 
-interface Comp {
-    data?: {},
-    topic?: {}
+interface ComposedProps { // Re-renders with data from Subscriber
+    data?: String,
+    topic?: String
 }
 
-interface ConnectedComp {
+interface UncomposedProps { 
     topic: String
 }
 
-const Comp = ({ topic }: ConnectedComp) => subscribe(
-    ({ data, topic }: Comp = {}) => (
+const Comp = ({ topic }: UncomposedProps) => subscribe(
+    ({ data, topic }: ComposedProps = {}) => (
         <div>{data ? `${data}` : `${topic} has no actvity yet`}</div>
     ), topic)
 
