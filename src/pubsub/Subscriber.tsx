@@ -26,8 +26,7 @@ class Subscriber extends Component<Props, State> {
                  *  scan((acc: any, curr: any) => [...acc, curr], [])
                  *  and access items in subscribe() with msg.pop()
                  */
-            )
-            .subscribe((msg: any) => {
+            ).subscribe((msg: any) => {
                  this.setState({ data: msg.data })
             })
         this.unsubscribe = () => this.subscription.unsubscribe();
