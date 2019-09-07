@@ -28,7 +28,7 @@ class Subscriber extends Component<Props, State> {
                  */
             )
             .subscribe((msg: any) => {
-                if (msg.topic === this.props.topic) this.setState({ data: msg.data })
+                 this.setState({ data: msg.data })
             })
         this.unsubscribe = () => this.subscription.unsubscribe();
     }
