@@ -11,7 +11,6 @@ const App: React.FC = (props: any) => {
     <Provider>
       <div className='App'>
         <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
           <small style={{ marginBottom: '2%' }}>
             Navigate to different routes using the buttons below. Each component is subscribed to its own topic,
             receiving relevant bits of data persisting to its own local state without needing to first receive it from the Provider store.

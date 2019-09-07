@@ -21,7 +21,9 @@
 }
 
 .Routes {
-  color:floralwhite;
+  color: floralwhite;
+  border: 1px solid floralwhite;
+  width: 60vw;
 }
 
 .App-link {

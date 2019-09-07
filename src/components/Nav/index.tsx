@@ -7,7 +7,7 @@ const Nav = withRouter(
     contextualize(
         (props: any) => {
             return (
-                <div style={{display: 'flex', justifyContent: 'space-around', width: '40vw', padding: '2%' }}>
+                <div style={{display: 'flex', justifyContent: 'space-around', width: '40vw', padding: '2%', margin: '0 auto' }}>
                     <Button size='large' type='primary' onClick={() => props.history.push('/')}>/</Button>
                     <Button size='large' type='primary' onClick={() => props.history.push('/alert')}>/alert</Button>
                     <Button size='large' type='primary' onClick={() => props.history.push('/info')}>/info</Button>

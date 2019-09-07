@@ -6,11 +6,11 @@ const Home = contextualize(
     (props: any) => {
         const { AlertTopic, InfoTopic, WarningTopic } = props.topics;
         return (
-            <>
+            <div>
                 <Comp topic={AlertTopic} />
                 <Comp topic={InfoTopic} />
                 <Comp topic={WarningTopic} />
-            </>
+            </div>
         )
     }
 )
