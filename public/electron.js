@@ -9,7 +9,6 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 async function createWindow() {
-    require('./server')();
     mainWindow = new BrowserWindow({ width: 900, height: 680 });
     mainWindow.loadURL(
         isDev
