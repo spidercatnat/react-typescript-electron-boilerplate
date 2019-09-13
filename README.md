@@ -1,5 +1,4 @@
-This is very much a work in progress, but feel free to contribute, clone, and fork! Take a peak in package.json for scripts to get started.
-
+# react-typescript-electron-boilerplate
 ```
 .
 ├── public
@@ -31,3 +30,8 @@ This is very much a work in progress, but feel free to contribute, clone, and fo
 - Human-friendly code
 
 - Reduce the amount of energy spent on programming what can often be haphazard lifecycle hooks to prevent unnecessary rerendering
+
+## Getting started
+- Install dependencies with `yarn`
+- Fire up dev scripts with `yarn start`... That's it!
+- Check `package.json` for build scripts
