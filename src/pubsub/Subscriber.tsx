@@ -5,9 +5,9 @@
  * - Add lifecycle hook(s) to only re-render when topics/locally relevant props change
  */
 
-import { Component, cloneElement, Children } from 'react'
+import React, { Component, cloneElement, Children } from 'react'
 import { filter, shareReplay } from 'rxjs/operators'
-import { Props, State } from './types';
+import { Props, State } from '../constants/types';
 import { messageService } from '.';
 export * from '../constants/topics'
 

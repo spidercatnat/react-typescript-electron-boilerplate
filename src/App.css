@@ -17,6 +17,7 @@
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: calc(10px + 2vmin);
+  font-weight: bold;
   color: #e1da8a;
 }
 
