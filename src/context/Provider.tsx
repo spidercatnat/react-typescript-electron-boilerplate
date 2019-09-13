@@ -8,7 +8,7 @@ const { AlertTopic, WarningTopic, InfoTopic, NavigationTopic } = topics;
 class Provider extends Component {
   state = {};
   async componentDidMount() {
-    _sendExampleMessages();
+    await _sendExampleMessages();
   }
   render() {
     return (
