@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { Provider } from './context';
 import { Nav, QR } from './components';
 import { Home, Alert, Info, Warning } from './views';
