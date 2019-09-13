@@ -1,4 +1,4 @@
-(() => {
+async function server() {
     /* Core modules / environment config */
     require('dotenv').config()
     const path = require('path');
@@ -32,4 +32,8 @@
     app.use(express.static(path.resolve(__dirname, '../build')));
     app.use(morgan('dev'))
     app.use(cors())
-})()
+    
+    return true;
+}
+
+module.exports = server;

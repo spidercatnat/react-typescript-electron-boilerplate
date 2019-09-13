@@ -33,7 +33,8 @@
   "description": "<your project description>",
   "author": "<author of app>",
   "build": {
-    "appId": "<com.your_app>"
+    "appId": "<com.your_app>",
+    "appDir": "./build"
   },
   "main": "public/electron.js",
   "homepage": "./",
@@ -42,7 +43,7 @@
     "react-build": "react-app-rewired build",
     "react-test": "react-app-rewired test --env=jsdom",
     "electron-build": "electron-builder",
-    "release": "yarn react-build && electron-builder --publish=always",
+    "release": "yarn react-build && electron-builder ----publish=always",
     "build": "yarn react-build && yarn electron-build",
     "start": "concurrently \"node server\" \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
