@@ -33,5 +33,6 @@
 
 ## Getting started
 - Install dependencies with `yarn`
-- Fire up dev scripts with `yarn start`... That's it!
+- Fire up dev scripts with `yarn start`
+- That's it!
 - Check `package.json` for build scripts
