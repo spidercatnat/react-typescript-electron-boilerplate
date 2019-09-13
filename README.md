@@ -1,11 +1,16 @@
 This is very much a work in progress, but feel free to contribute, clone, and fork! Take a peak in package.json for scripts to get started.
 
-## The approach - State management with Context and RxJS
+## Technologies
+- (React + Electron + TypeScript + AntDesign) = UI <3
+- (Context API + RxJS) = Declarative, human-friendly state management <3
+- (Express + ngrok + qrcode) =  API for rapid mobile development <3
+
+## State management with Context and RxJS
 - Each component is subscribed to its own topic, receiving relevant bits of data persisting to its own local state without needing to first receive it from the Provider store.
 
 - This makes way for a semantic separation of concerns between what I call macros and micros: the Provider store can handle app-level changes (macros), while the components can define their own fine-grained flow of reactions (micros) to those changes. Additionally, data can be sent to and between components from anywhere inside the application. 
 
-## Motivation
+## Why?
 - Separation of concerns between app- and component-level state
 
 - Human-friendly code
@@ -26,8 +31,3 @@ This is very much a work in progress, but feel free to contribute, clone, and fo
     ├── qr /* Generate QR codes */
     └── tunnel /* ngrok tunnel */
 ```
-
-Technologies: 
-- (React + Electron + TypeScript + AntDesign) = UI <3
-- (Context API + RxJS) = Declarative, human-friendly state management <3
-- (Express + ngrok + qrcode) =  API for rapid mobile development <3
