@@ -3,16 +3,16 @@ This is very much a work in progress, but feel free to contribute, clone, and fo
 ```
 .
 ├── public
-├── server
+├── server /* Dev server that runs ngrok with a QR API */
 ├── src
-│   ├── components
-│   ├── constants
-│   ├── context
-│   ├── pubsub
-│   └── views
+│   ├── components /* Re-useable bits go here */
+│   ├── constants /* Global constants like topics go here */
+│   ├── context /* Manage Provider store here */
+│   ├── pubsub /* RxJS API/HOC */
+│   └── views /* Views go here */
 └── utils
-    ├── qr
-    └── tunnel
+    ├── qr /* Generate QR codes */
+    └── tunnel /* ngrok tunnel */
 ```
 
 Technologies: 
