@@ -1,3 +1,4 @@
+const path = require('path');
 const electron = require("electron");
 const isDev = require("electron-is-dev");
 
